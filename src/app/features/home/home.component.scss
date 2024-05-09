@@ -1,0 +1,12 @@
+.content-home {
+    display: flex;
+    position: absolute;
+    float: right;
+    margin-left: 25%;
+}
+
+@media screen and (max-width: 786px) {
+    .content-home {
+        margin-left: 35%;
+    }
+}
