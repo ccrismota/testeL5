@@ -1,0 +1,119 @@
+.header {
+    background-color: #667A8A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.header img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.pesquisar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.login {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 15px;
+    a {
+        color: #C8DC5D;
+        text-decoration: none;
+    }
+}
+
+.login .bi-person-circle {
+    color: #C8DC5D;
+}
+
+.pesquisar input {
+    border-radius: 4px 0 0 4px;
+    border: 1px solid #01AFC8;
+    height: 50px;
+    width: 100%;
+    text-indent: 10px;
+    outline-color: #C8DC5D;
+}
+
+.pesquisar button {
+    border-radius: 0 4px 4px 0;
+    background-color: #01AFC8;
+    color: #C8DC5D;
+    border: 1px solid #01AFC8;
+    height: 50px;
+    font-size: 25px;
+}
+
+.login i {
+    font-size: 40px;
+}
+
+/******************************** Mobile part *********************************/
+
+@media screen and (min-width: 576px) {
+
+    .pesquisar-mobile input,
+    .pesquisar-mobile button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .pesquisar input,
+    .pesquisar button {
+        display: none;
+    }
+
+    .header {
+        height: 60px;
+    }
+
+    .header-mobile {
+        display: flex;
+        background-color: #667A8A;
+        justify-content: space-between;
+        height: 60px;
+    }
+
+    .pesquisar-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: -5px 0 0 0;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .pesquisar-mobile button {
+        border-radius: 0 4px 4px 0;
+        background-color: #01AFC8;
+        color: #C8DC5D;
+        border: 1px solid #01AFC8;
+        height: 50px;
+        font-size: 20px;
+        margin-right: 5px;
+        width: 50px;
+    }
+
+    .pesquisar-mobile input {
+        border-radius: 4px 0 0 4px;
+        border: 1px solid #01AFC8;
+        height: 50px;
+        width: 85%;
+        text-indent: 10px;
+        margin-left: 5px;
+    }
+
+    .header img {
+        max-width: 150%;
+    }
+}
