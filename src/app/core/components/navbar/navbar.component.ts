@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+image: string = 'assets/img/ReM_1.png'
+
 }
