@@ -8,17 +8,15 @@ $font-stack: "Sedgwick Ave Display", cursive;
     src: url('assets/fonts/get_schwifty.ttf') format('truetype');
 }
 
-$bg-color: #010110;
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: $font-stack
+    font-family: $font-stack;
 }
 
 body, html {
-    background-color: $bg-color;
+    --bg-color: #010110;;
     font-family: 'Tematica', schwifty;
     --sidebar-bg-color: #1A191A;
     --navbar-bg-color: #1A191A;
@@ -30,4 +28,5 @@ body, html {
     --text-color-hover: #C8DC5D;
     --lateral-color:#C8DC5D;
     --sidebar-text-color: #EAEAEA;
+    --bg-card-color: #EAEAEA;
 }

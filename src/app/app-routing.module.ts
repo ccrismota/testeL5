@@ -8,19 +8,15 @@ import { DetailsComponent } from './features/details/details.component';
 const routes: Routes = [
   {
     path: '', component: HomeComponent,
-    children:
-    [
-      {
-        path: 'character', component: CharacterComponent
-      },
-      {
-        path: 'episodes', component: EpisodesComponent
-      },
-      {
-       path: 'details', component: DetailsComponent
-      }
-      
-    ]
+  },
+  {
+    path: 'character', component: CharacterComponent
+  },
+  {
+    path: 'episodes', component: EpisodesComponent
+  },
+  {
+    path: 'details', component: DetailsComponent
   }
 ];
 
