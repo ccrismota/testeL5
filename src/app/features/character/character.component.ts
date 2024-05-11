@@ -1,8 +1,8 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { EpisodeInfo } from 'src/app/core/models/episodeInfo';
-import { CharacterService } from 'src/app/core/services/character.service';
-import { __param } from 'tslib';
+import { CharacterInfo } from 'src/app/core/models/characterInfo';
+import { CharacterService } from 'src/app/core/services/character/character.service';
+
 
 @Component({
   selector: 'app-character',
@@ -17,7 +17,7 @@ export class CharacterComponent implements OnInit {
   ) { this.allCharacter(); }
 
   currentText: any;
-  getCharacterModel?: EpisodeInfo;
+  getCharacterModel?: CharacterInfo;
   pages: number[] = [];
   page = 1;
   isLoading = false;
@@ -48,7 +48,7 @@ export class CharacterComponent implements OnInit {
   onScrollInfinity(): void {
     if (window.innerHeight + window.scrollY >= document
       .body.offsetHeight && !this.isLoading) {
-      this.allCharacter(this.page + 1);
+      this.allCharacter(this.page++);
     }
   }
 

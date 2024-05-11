@@ -6,7 +6,7 @@ import { EpisodesComponent } from './episodes/episodes.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../app-routing.module';
-
+import { AbrevtextPipe } from '../shared/abrevtext.pipe';
 
 
 @NgModule({
@@ -15,12 +15,14 @@ import { AppRoutingModule } from '../app-routing.module';
     DetailsComponent,
     EpisodesComponent,
     HomeComponent,
+    AbrevtextPipe
   ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+
   ],
   exports: [
     CharacterComponent,
