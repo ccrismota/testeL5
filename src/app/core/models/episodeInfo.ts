@@ -1,7 +1,7 @@
-import { Character } from "./character";
+import { Episode } from "./episode";
 import { Info } from "./info";
 
 export interface EpisodeInfo {
-    info:    Info;
-    results: Character[];
+    info: Info;
+    results: Episode[];
 }
