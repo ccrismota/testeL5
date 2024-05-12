@@ -17,7 +17,7 @@ export class EpisodesComponent {
   ) { this.allEpisode(); }
 
   currentText: any;
-  getEpisodeModel?: EpisodeInfo;
+  getEpisodeModel!: EpisodeInfo;
   pages: number[] = [];
   page = 1;
   isLoading = false;

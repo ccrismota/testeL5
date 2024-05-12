@@ -1,13 +1,20 @@
 <div class="container-fluid">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-4 py-4 px-3 ">
-        <div class="col" *ngFor="let episode of getEpisodeModel?.results">
-            <div class="card h-100">
-                <div class="card-header bg-transparent">{{episode.name}}</div>
-                <div class="card-text bg-transparent">{{episode.air_date | date: 'EEEE, d MMMM, y'}}</div>
-                <div class="card-text bg-transparent">Episodio: {{episode.episode}}</div>
-                <div class="card-text bg-transparent">{{episode.characters.length}} Personagens</div>
-                <div class="card-text-footer">
-                    <small type="text" class="text-muted">Criação: {{episode.created | date: 'dd/MM/yyyy' }}</small>
+    <div class="row row-cols-1 row-cols-s-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 row-cols-xxl-2 g-4">
+        <div *ngFor="let episode of getEpisodeModel?.results" class="col">
+            <div class="card h-100" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <img src="assets/img/rem.jpg" class="img-fluid rounded-start" alt="Personagem">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h2 class="card-title">{{episode.name}}</h2>
+                            <p class="card-text">{{episode.air_date | date: 'EEEE, d MMMM, y'}}</p>
+                            <p class="card-text">Episodio: {{episode.episode}}</p>
+                            <p class="card-text">{{episode.characters.length}} Personagens</p>
+                            <p class="card-text">Criação: {{episode.created | date: 'dd/MM/yyyy' }}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

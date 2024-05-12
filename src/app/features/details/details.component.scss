@@ -1,0 +1,39 @@
+.container-fluid{
+    display: block;
+    height: calc(100vh - 100px); 
+    background-color: var(--bg-color);
+    overflow-y: auto;
+    width: 75%;
+    overflow-y: auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--lateral-color);
+    text-align: center;
+    background-color: var(--bg-card-color);
+    margin: 25px ;
+    text-align: left;
+}
+
+.card-body {
+    height: 100%;
+}
+
+
+@media screen and (max-width: 786px) {
+    .sidebar {
+        width: 35%;
+    }
+
+    .container-fluid {
+        width: 65%;
+    }
+
+    .card {
+        margin: 5px;
+    }
+}

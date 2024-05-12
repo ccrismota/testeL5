@@ -6,8 +6,8 @@
 .nav-menu {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 10px 10px;
+    justify-content: flex-start;
+    padding: 10px 10px 10px 30px;
     margin-bottom: 0;
     font-size: 50px;
     border: 1px solid var(--border-color);
@@ -17,7 +17,7 @@
 .item {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 20px 10px;
     margin: 2px 0;
     font-size: 25px;
@@ -39,7 +39,7 @@ a:hover {
 
 
 .item i {
-    margin-right: 20px;
+    margin: 0 20px 0 15px;
     font-size: 35px;
 }
 

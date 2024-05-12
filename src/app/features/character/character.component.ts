@@ -11,13 +11,14 @@ import { CharacterService } from 'src/app/core/services/character/character.serv
 })
 export class CharacterComponent implements OnInit {
 
+  
   constructor(
     private characterService: CharacterService,
     private route: ActivatedRoute
   ) { this.allCharacter(); }
 
   currentText: any;
-  getCharacterModel?: CharacterInfo;
+  getCharacterModel!: CharacterInfo;
   pages: number[] = [];
   page = 1;
   isLoading = false;
@@ -54,7 +55,8 @@ export class CharacterComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe((params) => {
+    console.log(this.getCharacterModel, 'CHARACTER');
+    this.route.queryParams.subscribe(() => {
       this.allCharacter(this.page);
     });
   }
