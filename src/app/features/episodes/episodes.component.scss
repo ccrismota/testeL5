@@ -1,7 +1,6 @@
 .container-fluid{
     display: block;
     height: calc(100vh - 100px); 
-    background-color: var(--bg-color);
     overflow-y: auto;
     width: 75%;
     overflow-y: auto;
@@ -15,8 +14,9 @@
 
 .card{
     border: 1px solid var(--lateral-color);
-    text-align: center;
+    text-align: left;
     background-color: var(--bg-card-color);
+    margin-top: 20px;
 }
 
 .card-header{

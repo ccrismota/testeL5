@@ -1,1 +1,20 @@
-<p>details works!</p>
+<div class="container-fluid">
+    <div class="card row g-0">
+        <div class="col-md-6 col-xs-12">
+            <img src={{character.image}} class="card-img-top" alt="Personagem">
+        </div>
+        <div class="col-md-6 col-xs-12">
+            <div class="card-body">
+                <h2 class="card-title">Name: {{character.name}}</h2>
+                <p class="card-text">Status: {{character.status}}</p>
+                <p class="card-text">Species: {{character.species}}</p>
+                <p class="card-text">Type: {{character.type}}</p>
+                <p class="card-text">Gender: {{character.gender}}</p>
+                <p class="card-text">Origin: {{character.origin.name}}</p>
+                <p class="card-text">Location: {{character.location.name}}</p>
+                <p class="card-text">Performance: {{character.episode.length}} Episode(s)</p>
+                <p class="card-text">Created: {{character.created | date: 'dd/MM/yyy'}}</p>
+            </div>
+        </div>
+    </div>
+</div>

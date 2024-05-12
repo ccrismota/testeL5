@@ -1,6 +1,8 @@
 import { Gender } from "./gender";
+import { Origin } from "./origin";
 import { Species } from "./species";
 import { Status } from "./status";
+import { Location } from "./location";
 
 export interface Character {
     id:       number;
@@ -9,7 +11,7 @@ export interface Character {
     species:  Species;
     type:     string;
     gender:   Gender;
-    origin:   Location;
+    origin:   Origin;
     location: Location;
     image:    string;
     episode:  string[];

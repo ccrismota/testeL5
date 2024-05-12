@@ -16,10 +16,15 @@
 .card{
     border: 1px solid var(--lateral-color);
     text-align: center;
-    background-color: var(--bg-card-color);
 }
 
+.card a {
+    text-decoration: none;
+}
 
+.card-footer {
+    background-color: var(--bg-card-color);
+}
 
 
 @media screen and (max-width: 786px) {

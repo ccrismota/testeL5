@@ -7,17 +7,21 @@ import { DetailsComponent } from './features/details/details.component';
 
 const routes: Routes = [
   {
-    path: '', component: HomeComponent,
+    path: 'home', component: HomeComponent,
   },
   {
-    path: 'character', component: CharacterComponent
+    path: 'character', component: CharacterComponent,    
   },
   {
     path: 'episodes', component: EpisodesComponent
   },
   {
-    path: 'details', component: DetailsComponent
+    path: 'character/:id', component: DetailsComponent
+  },
+  {
+    path: '**', redirectTo: 'home'
   }
+
 ];
 
 @NgModule({

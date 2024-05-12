@@ -2,7 +2,6 @@
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
 $font-stack: "Sedgwick Ave Display", cursive;
-// $font-stack: Poppins, sans-serif;
 @font-face {
     font-family:  "Tematica", schwifty;
     src: url('assets/fonts/get_schwifty.ttf') format('truetype');
@@ -16,7 +15,7 @@ $font-stack: "Sedgwick Ave Display", cursive;
 }
 
 body, html {
-    --bg-color: #010110;;
+    --bg-color: #010110;
     font-family: 'Tematica', schwifty;
     --sidebar-bg-color: #1A191A;
     --navbar-bg-color: #1A191A;
@@ -28,6 +27,7 @@ body, html {
     --text-color-hover: #C8DC5D;
     --lateral-color:#C8DC5D;
     --sidebar-text-color: #EAEAEA;
-    --bg-card-color: #EAEAEA;
+    --bg-card-color: #FAFAF8;
     --text-color-card: #01AFC8;
+    --text-color-s: #EAEAEA;
 }
