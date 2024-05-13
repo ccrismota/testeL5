@@ -1,6 +1,6 @@
 # Rick & Morty 
 
-<a href="https://imgur.com/o9FA0IR"><img src="[Imgur](https://i.imgur.com/o9FA0IR.png)" title="source: imgur.com" /></a>
+<a href="https://imgur.com/o9FA0IR"><img src="https://i.imgur.com/o9FA0IR.png" title="source: imgur.com" /></a>
 
 Você pode acessá-lo com este [link.]()
 
