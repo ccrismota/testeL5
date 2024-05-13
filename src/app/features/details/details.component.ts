@@ -13,8 +13,6 @@ export class DetailsComponent implements OnInit {
 
    character!: Character;
 
-
-
   constructor(
     private route: ActivatedRoute,
     private characterService: CharacterService,
