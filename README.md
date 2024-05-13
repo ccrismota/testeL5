@@ -37,7 +37,7 @@ Esse projeto foi desenvolvido com as seguintes ferramentas:
 
 ### Siga os seguintes passos
 
--Se você ainda não tem o node instalado, acesse [node](https://nodejs.org/en) faça download e sigua os passos da instalação.
+-  Se você ainda não tem o node instalado, acesse [node](https://nodejs.org/en) faça download e sigua os passos da instalação.
 
 -  Se você ainda não tem o Angular CLI instalado, abra o vscode e vá em arquivos (file) procure por abrir pasta (open folder) encontre o seu projeto. Depois no menu terminal escolha a opção novo terminal. Pronto, agora no seu terminal execute o seguinte comando para instalá-lo globalmente:
     
@@ -51,8 +51,8 @@ Esse projeto foi desenvolvido com as seguintes ferramentas:
 
         ng serve -o
 
-Isso iniciará o servidor de desenvolvimento em modo "localhost". Por padrão, a aplicação Angular estará disponível em http://localhost:4200/.
-
+- Isso iniciará o servidor de desenvolvimento em modo "localhost". Por padrão, a aplicação Angular estará disponível em http://localhost:4200/.
+---
 ### Outra opção
 
 - Clonar esse repositório do github, para isso precisa ter o git instalado na sua máquina. Para isso, acesse o [git](https://git-scm.com/) faça download e sigua os passos da instalação.
