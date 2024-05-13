@@ -1,10 +1,10 @@
 <div>
     <header>
         <section class="header d-flex">
-            <a href="#" class="col-4"><img [src]="image" alt="Logo da aplicacao"></a>
+            <a [routerLink]="['home']" class="col-4"><img [src]="image" alt="Logo da aplicacao"></a>
             <div class="pesquisar  col-6">
-                <input type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisar aqui...">
-                <button class="btn"><i class="bi bi-search"></i></button>
+                <input #Input type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisar aqui..." (keyup)="search(Input.value)">
+                <button type="button" class="btn" (click)="search(Input.value)"><i class="bi bi-search"></i></button>
             </div>
             <div class="login col-2">
                 <a href="home" class="btn">Login</a>

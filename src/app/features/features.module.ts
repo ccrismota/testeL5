@@ -15,7 +15,8 @@ import { AbrevtextPipe } from '../shared/abrevtext.pipe';
     DetailsComponent,
     EpisodesComponent,
     HomeComponent,
-    AbrevtextPipe
+    AbrevtextPipe,
+    
   ],
   imports: [
     CommonModule,

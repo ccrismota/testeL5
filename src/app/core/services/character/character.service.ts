@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { Observable } from 'rxjs';
 import { API_CONFIG } from 'src/app/config/api.config';
 import { CharacterInfo } from '../../models/characterInfo';
 import { Character } from '../../models/character';
@@ -15,8 +15,9 @@ export class CharacterService {
     private http: HttpClient) { }
 
 
-  getAllCharacter(page = 1): Observable<CharacterInfo> {
-    return this.http.get<CharacterInfo>(`${API_CONFIG.characterUrl}/?page=${page}`);
+  getAllCharacter(page = 1, term = ""): Observable<CharacterInfo> {
+    return this.http.get<CharacterInfo>(
+      `${API_CONFIG.characterUrl}/?page=${page}${(term === "") ? "" : "&name=" + term}`);         
   }
 
   getCharacterById(id: number): Observable<Character> {
