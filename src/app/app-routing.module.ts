@@ -13,10 +13,10 @@ const routes: Routes = [
     path: 'character', component: CharacterComponent,    
   },
   {
-    path: 'episodes', component: EpisodesComponent
+    path: 'character/:id', component: DetailsComponent
   },
   {
-    path: 'character/:id', component: DetailsComponent
+    path: 'episodes', component: EpisodesComponent
   },
   {
     path: '**', redirectTo: 'home'
