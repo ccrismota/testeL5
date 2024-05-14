@@ -86,7 +86,7 @@ ngOnDestroy(): void {
   onScrollInfinity(): void {
     if (window.innerHeight + window.scrollY >= document
       .body.offsetHeight && !this.isLoading) {
-      this.allEpisode(this.page++);
+      this.allEpisode(++this.page);
     }
   }
 

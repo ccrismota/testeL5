@@ -88,7 +88,7 @@ private allCharacter(page: number = 1) {
   onScrollInfinity(): void {
     if (window.innerHeight + window.scrollY >= document
       .body.offsetHeight && !this.isLoading) {
-      this.allCharacter(this.page++);
+      this.allCharacter(++this.page);
     }
   }
 
