@@ -1,25 +1,39 @@
-import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
+import { Component, OnDestroy, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { CharacterInfo } from 'src/app/core/models/characterInfo';
 import { CharacterService } from 'src/app/core/services/character/character.service';
+import { SearchStateService } from 'src/app/core/services/states/search-state.service';
 
 @Component({
   selector: 'app-character',
   templateUrl: './character.component.html',
   styleUrls: ['./character.component.scss']
 })
-export class CharacterComponent implements OnInit {
+export class CharacterComponent implements OnInit, OnDestroy{
 
-  getCharacterModel!: CharacterInfo;
-  pages: number[] = [];
-  page = 1;
-  searchCharacter: any;
-  isLoading = false;
+  private searchSubscription: Subscription;
 
   constructor(
     private characterService: CharacterService,
-    private route: ActivatedRoute
-  ) { this.allCharacter(); }
+    private route: ActivatedRoute,
+    private router: Router,
+    private searchStateService: SearchStateService
+
+  ) {
+    this.searchSubscription = this.searchStateService.searchTerm$.subscribe((term) => {
+      this.searchCharacter = term;
+      this.search(term);
+      this.allCharacter(this.page);
+    });
+   }
+
+   getCharacterModel!: CharacterInfo;
+   pages: number[] = [];
+   page = 1;
+   searchCharacter: string = "";
+   isLoading = false;
+
 
   ngOnInit(): void {
     
@@ -39,13 +53,25 @@ export class CharacterComponent implements OnInit {
 
   }
 
-  allCharacter(page: number = 1) {
+  search(term: string) {    
+    term = term.trim();
+    const currentUrl = this.router.url;
+    const newUrl = `character/?page=${this.page}&name=${term}`;
+    if (currentUrl !== newUrl) {
+      this.router.navigate(['character'], { queryParams: { page: this.page, name: term } });
+    }        
+}
+
+ngOnDestroy(): void {
+  this.searchSubscription.unsubscribe();
+}
+
+private allCharacter(page: number = 1) {
     this.isLoading = true;
     this.characterService.getAllCharacter(page, this.searchCharacter).subscribe((characters) => {
       this.getCharacterModel = characters;
       this.getArrayPages(characters.info.pages);
       this.page = page;
-      this.page++;
       this.isLoading = false;
     },);
   }

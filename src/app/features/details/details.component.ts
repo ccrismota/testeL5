@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { EMPTY, Observable, switchMap, } from 'rxjs';
+import { switchMap, } from 'rxjs';
 import { Character } from 'src/app/core/models/character';
 import { CharacterService } from 'src/app/core/services/character/character.service';
 
@@ -11,25 +11,13 @@ import { CharacterService } from 'src/app/core/services/character/character.serv
 })
 export class DetailsComponent implements OnInit {
 
-   character!: Character;
-
   constructor(
     private route: ActivatedRoute,
     private characterService: CharacterService,
     private router: Router
   ) { }
 
-  gotoCharacters() {
-    this.router.navigate(['/character']);
-  }
-
-
-  getCharacterById(id: number) {
-    this.characterService.getCharacterById(id).subscribe(
-      character => {
-        this.character = character;
-      });
-  }
+  character!: Character;
 
 
   ngOnInit(): void {
@@ -40,5 +28,22 @@ export class DetailsComponent implements OnInit {
       this.character = character;
     });
   }
+
+  isUndefined(): boolean {
+    return !!this.character;
+  }
+
+  gotoCharacters() {
+    this.router.navigate(['character']);
+  }
+
+  getCharacterById(id: number) {
+    this.characterService.getCharacterById(id).subscribe(
+      character => {
+        this.character = character;
+      });
+  }
+
+
 
 }

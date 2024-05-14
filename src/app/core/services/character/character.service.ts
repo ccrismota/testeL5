@@ -17,7 +17,7 @@ export class CharacterService {
 
   getAllCharacter(page = 1, term = ""): Observable<CharacterInfo> {
     return this.http.get<CharacterInfo>(
-      `${API_CONFIG.characterUrl}/?page=${page}${(term === "") ? "" : "&name=" + term}`);         
+      `${API_CONFIG.characterUrl}?page=${page}${(term === "") ? "" : "&name=" + term}`);         
   }
 
   getCharacterById(id: number): Observable<Character> {

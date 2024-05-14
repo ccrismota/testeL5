@@ -11,8 +11,8 @@ export class EpisodeService {
 
   constructor(private http: HttpClient) { }
 
-allEpisodes(page = 1): Observable<EpisodeInfo>{
-  return this.http.get<EpisodeInfo>(`${API_CONFIG.episodeUrl}?page=${page}`);
+allEpisodes(page = 1, term = ""): Observable<EpisodeInfo>{
+  return this.http.get<EpisodeInfo>(`${API_CONFIG.episodeUrl}?page=${page}${(term === "") ? "" : "&name=" + term}`);
   }
 
 

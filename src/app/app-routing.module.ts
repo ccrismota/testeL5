@@ -16,7 +16,7 @@ const routes: Routes = [
     path: 'character/:id', component: DetailsComponent
   },
   {
-    path: 'episodes', component: EpisodesComponent
+    path: 'episode', component: EpisodesComponent
   },
   {
     path: '**', redirectTo: 'home'

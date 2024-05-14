@@ -2,8 +2,9 @@
     <header>
         <section class="header d-flex">
             <a [routerLink]="['home']" class="col-4"><img [src]="image" alt="Logo da aplicacao"></a>
-            <div class="pesquisar  col-6">
-                <input #Input type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisar aqui..." (keyup)="search(Input.value)">
+            <div class="pesquisar col-6">
+                <input #Input type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisar aqui..."
+                    (keyup)="search(Input.value)" />
                 <button type="button" class="btn" (click)="search(Input.value)"><i class="bi bi-search"></i></button>
             </div>
             <div class="login col-2">
@@ -11,10 +12,11 @@
                 <span><i class="bi bi-person-circle"></i></span>
             </div>
         </section>
-        <section class="header-mobile">
+        <section  class="header-mobile">
             <div class="pesquisar-mobile">
-                <input type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisar aqui...">
-                <button ><i class="bi bi-search"></i></button>
+                <input #Inputt type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisar aqui..."
+                    (keyup)="search(Inputt.value)">
+                <button type="button" class="btn" (click)="search(Inputt.value)"><i class="bi bi-search"></i></button>
             </div>
         </section>
     </header>

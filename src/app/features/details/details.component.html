@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="card row g-0">
+    <div class="card row g-0" *ngIf="isUndefined()">
         <div class="col-md-6 col-xs-12">
             <img src={{character.image}} class="card-img-top" alt="Personagem">
         </div>
