@@ -15,9 +15,11 @@ As principais features existentes são:
 - Listagem de Epeisódios;
 - Página de Destalhes;
 - Responsividade;
+- Scroll Infinito;
+- Pesquisa com amplitude global;
 
 
-Você pode acessá-lo com este [link.]()
+Você pode acessá-lo com este [link.](https://workapirm.netlify.app)
 
 ---
 
